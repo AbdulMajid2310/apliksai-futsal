@@ -8,7 +8,7 @@ class Foto_model extends CI_Model
 
   function get_all()
   {
-    $this->db->select('id_album, id_foto, nama_foto, nama_album, foto.foto as gambar, foto.created_at, foto.created_by, foto.modified_at, foto.modified_by');
+    $this->db->select('id_album, id_foto, nama_foto, nama_album, foto.foto, foto.created_at, foto.created_by, foto.modified_at, foto.modified_by');
     $this->db->join('album', 'foto.album_id = album.id_album');
     $this->db->order_by($this->id, $this->order);
     return $this->db->get($this->table)->result();

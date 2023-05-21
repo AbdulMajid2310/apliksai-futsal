@@ -28,9 +28,9 @@
 										<thead>
                       <tr>
                         <th style="text-align: center">No.</th>
+                        <th style="text-align: center">Image</th>
                         <th style="text-align: center">Nama <?php echo $module ?></th>
                         <th style="text-align: center">Album</th>
-                        <th style="text-align: center">Img</th>
                         <th style="text-align: center">Uploader</th>
                         <th style="text-align: center">Upload</th>
                         <th style="text-align: center">Updater</th>
@@ -42,9 +42,9 @@
                       <?php $no=1; foreach($get_all as $data){ ?>
                         <tr>
                           <td style="text-align: center"><?php echo $no++ ?></td>
+                          <td style="text-align: center"><img src="<?php echo base_url('assets/images/foto/').$data->foto ?>" width="80px"></td>
                           <td style="text-align: center"><?php echo $data->nama_foto ?></td>
                           <td style="text-align: center"><?php echo $data->nama_album ?></td>
-                          <td style="text-align: center"><img src="<?php echo base_url('assets/images/foto/').$data->gambar ?>" width="300px"></td>
                           <td style="text-align: center"><?php echo $data->created_by ?></td>
                           <td style="text-align: center"><?php echo $data->created_at ?></td>
                           <td style="text-align: center"><?php echo $data->modified_by ?></td>

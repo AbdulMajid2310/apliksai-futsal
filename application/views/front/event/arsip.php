@@ -9,9 +9,9 @@
 	</ol>
 
 	<div class="row">
-		<div class="col-md-8"><h1>SEMUA EVENT</h1><hr>
+		<div class="col-md-8"><h3>SEMUA EVENT</h3><hr>
 			<?php foreach($event_all as $event){ ?>
-				<h2><a href="<?php echo base_url('event/').$event->slug_event ?>"><?php echo $event->nama_event ?></a></h2>
+				<h3><a href="<?php echo base_url('event/').$event->slug_event ?>"><?php echo $event->nama_event ?></a></h3>
 				<a href="<?php echo base_url("event/$event->slug_event ") ?>">
 					<?php
 					if(empty($event->foto)) {echo "<img class='img-responsive' src='".base_url()."assets/images/no_image_thumb.png'>";}

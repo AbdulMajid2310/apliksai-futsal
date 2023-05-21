@@ -28,6 +28,7 @@
 										<thead>
 											<tr>
 												<th style="text-align: center">No.</th>
+                        <th style="text-align: center">Image</th>
 												<th style="text-align: center">Nama Lapangan</th>
                         <th style="text-align: center">Harga per Jam</th>
                         <th style="text-align: center">Uploader</th>
@@ -41,6 +42,7 @@
                       <?php $no=1; foreach($get_all as $data){ ?>
                         <tr>
                           <td style="text-align: center"><?php echo $no++ ?></td>
+                          <td style="text-align: center"><img src="<?php echo base_url('assets/images/lapangan/').$data->foto ?>" width="80px"></td>                         
                           <td style="text-align: center"><?php echo $data->nama_lapangan ?></td>
                           <td style="text-align: center"><?php echo number_format($data->harga) ?></td>
                           <td style="text-align: center"><?php echo $data->created_by ?></td>
